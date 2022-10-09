@@ -1,0 +1,66 @@
+Sub stonk_tracker()
+
+  ' Set an initial variable for holding the brand name
+    Dim stock_name As String
+    Dim total_volume As Double
+    total_volume = 0
+    Dim i As Long
+    Dim stock As String
+    'yearly change
+    Dim open_price As Double
+    Dim close_price As Double
+    Dim yearly_change As Double
+    Dim percent_change As Double
+    
+    ' Keep track of the location for each credit card brand in the summary table
+    Dim summary_table_Row As Integer
+    summary_table_Row = 2
+    Dim closing_price As Double
+    
+    open_price = Cells(2, 3).Value
+    
+    'loop through sheets
+    ws_count = ActiveWorkbook.Worksheets.Count
+    For j = 1 To ws_count
+        ' Loop through all credit card purchases
+        For i = 2 To Columns.Count
+        
+        ' Check if we are still within the same credit card brand, if we are not...
+        stock = Cells(i, 1).Value
+        If Cells(i + 1, 1).Value <> Cells(i, 1).Value Then
+            stock_name = Cells(i, 1).Value
+    
+          ' Add to the Brand Total
+            total_volume = total_volume + Cells(i, 7).Value
+            
+            closing_price = Cells(i, 6).Value
+            yearly_change = closing_price - open_price
+            percent_change = yearly_change / open_price
+            
+            Cells(summary_table_Row, 9).Value = stock_name
+            Cells(summary_table_Row, 10).Value = yearly_change
+            Cells(summary_table_Row, 11).Value = percent_change
+            Cells(summary_table_Row, 12).Value = total_volume
+            
+            'Color formatting
+            If yearly_change > 0 Then
+                Cells(summary_table_Row, 10).Interior.ColorIndex = 4
+            Else
+                Cells(summary_table_Row, 10).Interior.ColorIndex = 3
+            End If
+                  
+            'reset
+            summary_table_Row = summary_table_Row + 1
+            total_volume = 0
+            open_price = Cells(i + 1, 3).Value
+            
+        Else
+            total_volume = total_volume + Cells(i, 7).Value
+            
+        End If
+        
+
+        Next i
+    Next j
+
+End Sub
