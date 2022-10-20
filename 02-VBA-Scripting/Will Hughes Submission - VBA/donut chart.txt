@@ -1,0 +1,24 @@
+# step 1, get the data
+pies = ["Apple", "Pumpkin", "Chocolate Creme", "Cherry", "Apple Crumb",
+        "Pecan", "Lemon Meringue", "Blueberry", "Key Lime", "Peach"]
+pie_votes = [47, 37, 32, 27, 25, 24, 24, 21, 18, 16]
+
+# for customization
+colors = ["yellow", "green", "lightblue", "orange", "red",
+          "purple", "pink", "yellowgreen", "lightskyblue", "lightcoral"]
+explode = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+# step 2, init the plot
+fig = plt.figure(figsize=(10,6))
+plt.pie(pie_votes, labels=pies, colors=colors, explode=explode, autopct="%1.1f%%", pctdistance=0.85, shadow=True, startangle=140)
+
+# step 2.5, draw a circle
+centre_circle = plt.Circle((0, 0), 0.70, fc='white')
+fig.gca().add_artist(centre_circle)
+
+# step 3 - customization
+plt.title("Donut Chart of Pies\n", fontweight="bold")
+plt.axis("equal")
+
+# step 4 - show the pie
+plt.show()

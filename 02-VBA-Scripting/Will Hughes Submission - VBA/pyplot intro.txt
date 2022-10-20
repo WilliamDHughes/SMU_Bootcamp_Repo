@@ -1,0 +1,24 @@
+#get data
+x = times
+y1 = danger_drop_speed
+y2 = railgun_speed
+#make the plot
+fig = plt.figure(figsize=(12, 8))
+plt.plot(x, y1, linewidth=3, marker="o", markersize=10, color="firebrick", label="Danger")
+plt.plot(x, y2, linewidth=3, marker="o", markersize=10, color="darkblue", label="Railgun")
+#customization
+plt.xlabel("Time s", fontname="Impact", fontsize=18)
+plt.ylabel("Speed mph", fontname="Impact", fontsize=18)
+plt.title("Danger vs Railgun", fontsize=18, fontstyle="italic", fontweight="bold", color="firebrick", fontname="Impact")
+plt.legend(loc = "lower right")
+
+plt.xlim(-5, 125)
+plt.ylim(0, 100)
+
+plt.grid(axis="y", alpha=0.25)
+
+
+
+#show save plot
+plt.savefig("CoastersWill.png")
+plt.show()

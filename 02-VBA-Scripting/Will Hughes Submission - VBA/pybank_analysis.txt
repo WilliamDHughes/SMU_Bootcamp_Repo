@@ -1,0 +1,8 @@
+Analysis for Pybank Activity
+
+For this analysis I wrote code that calculates the total change, the average, and the max and min changes. It then takes that information and writes it to a new text file. 
+
+The average seemes to be trending down which indicates the company has overall been losing money which is generally considered to be bad news bears. 
+Summer months appear to perform better than winter months. 
+I tried and failed to read the .csv into a Jupyter Notebook and hit it with some matplotlib but I couldn't make it happen. I think it would have confirmed my summer/winter theory. 
+Maybe the company sould start pushing initiaves to pick up more business in the winter months. 

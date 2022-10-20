@@ -1,0 +1,5 @@
+Analysis for pypoll activity
+
+Again I tried for a pyplot bar chart but I couldn't figure it out. 
+Diana DeGette won by a substantial margin. Perhaps she had backers with deeper pockets, or perhaps she was simply 50% more likable than Charles. 
+I would really like to see the breakdown by county on this. Diana seems to have a lock on Denver, which probably explains all those votes. 
