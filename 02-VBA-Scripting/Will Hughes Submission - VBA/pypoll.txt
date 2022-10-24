@@ -1,6 +1,6 @@
 import csv
 
-csvpath = "election_dataHughes.csv"
+csvpath = "C:/Users/Will/Desktop/smubootcamp/gitlab/SMU-VIRT-DATA-PT-09-2022-U-LOLC/02-Homework/03-Python/Instructions/PyPoll/Resources/election_data.csv"
 
 rows = 0
 votes = {}

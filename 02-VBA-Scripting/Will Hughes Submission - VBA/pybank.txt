@@ -1,5 +1,5 @@
 import csv
-csvpath = "budget_dataHughes.csv"
+csvpath = "C:/Users/Will/Desktop/smubootcamp/gitlab/SMU-VIRT-DATA-PT-09-2022-U-LOLC/02-Homework/03-Python/Instructions/PyBank/Resources/budget_data.csv"
 
 rows = 0
 total = 0
@@ -12,7 +12,7 @@ min_change = 99999999999
 min_month = ""
 max_month = ""
 
-with open(csvpath, encoding='utf-8') as csvfile:
+with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     
     csv_header = next(csvreader)
