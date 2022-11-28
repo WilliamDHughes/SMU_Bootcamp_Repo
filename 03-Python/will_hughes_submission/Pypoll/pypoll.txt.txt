@@ -30,5 +30,7 @@ poll_output = f"""
 
 with open('Polling Data.txt', 'w') as f:
     f.write('Polling Data.txt\n')
+    f"-------------------------\n"
     f.write("Winner: Diana DeGette!")
+    f"-------------------------\n"
     f.write(poll_output) 
